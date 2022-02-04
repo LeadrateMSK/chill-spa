@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Bodoni';
+    src: local('Bodoni Bold'), local('Bodoni-Bold'),
+        url('subset-Bodoni-Bold.woff2') format('woff2'),
+        url('subset-Bodoni-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+

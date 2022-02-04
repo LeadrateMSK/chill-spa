@@ -1,13 +1,18 @@
 // FONTS
-$userfont: 'Circe', sans-serif;
+$userfont: 'Gotham Pro', sans-serif;
+$accentfont: 'Bodoni', sans-serif;
 
 
 // COLORS
 $white: #ffffff;
-$black: #17191E;
-$dark: #22252D;
-$primary: #4069FF;
-$grey: rgba($white, .4);
+$black: #323232;
+$primary: #89937A;
+$accent: #DEC471;
+$grey: #BEBEBE;
+
+
+// Effects & animation
+$anim: all .09s ease-out;
 
 
 // BREAKPOINTS

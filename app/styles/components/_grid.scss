@@ -1,33 +1,17 @@
-$gap: 30px;
+$gap: 20px;
 
 .container {
   position: relative;
   width: 100%;
-  max-width: 1320px;
+  max-width: 1044px;
   padding-left: calc(#{$gap} / 2);
   padding-right: calc(#{$gap} / 2);
   margin: auto;
-
-  @media (max-width: #{screen(xl)}) {
-    max-width: #{screen(lg)};
-  }
-
-  @media (max-width: #{screen(lg)}) {
-    max-width: #{screen(md)};
-  }
-
-  @media (max-width: #{screen(md)}) {
-    max-width: #{screen(sm)};
-  }
-
-  @media (max-width: #{screen(sm)}) {
-    max-width: #{screen(xs)};
-  }
 }
 
 @for $i from 1 through 12 {
   .cols-#{$i} {
-    @include create-col(#{$i}, #{$gap}, 0);
+    @include create-col(#{$i}, 0);
   }
 }
 

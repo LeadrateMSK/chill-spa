@@ -1,0 +1,61 @@
+.header {
+	position: relative;
+	min-height: 620px;
+	margin-top: 70px;
+	display: flex;
+	align-items: center;
+
+	&__slider {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 2;
+			background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+		}
+	}
+
+	&__content {
+		position: relative;
+		max-width: 549px;
+		color: $white;
+		padding-left: 49px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 19px;
+			background-image: url('/img/ui/zigzag.svg');
+			background-size: 100%;
+			background-repeat-x: no-repeat;
+		}
+
+		&-title {
+			font-family: $accentfont;
+			font-size: rem(50px);
+			font-weight: 700;
+			letter-spacing: -0.01rem;
+			margin-bottom: 20px;
+		}
+
+		&-subtitle {
+			font-weight: 400;
+			font-size: rem(20px);
+			line-height: 125%;
+			margin-bottom: 40px;
+		}
+	}
+}

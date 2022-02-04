@@ -1,13 +1,78 @@
 .navbar {
-  position: relative;
-  z-index: 10;
-  
-  &__title {
-    display: block;
-    text-align: center;
-    font-size: rem(14px);
-    padding: 50px 0;
-    color: $grey;
-    margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: $white;
+
+  &--scrolled {
+    position: fixed;
+    box-shadow: 0 4px 9px rgba($black, 0.1);
+    animation-name: fadeDown;
+    animation-duration: .9s;
+    animation-timing-function: ease;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    display: inline-block;
+    padding: 10px 0;
+    user-select: none;
+
+    img {
+      width: 56px;
+    }
+  }
+
+  &__toggler {
+    display: none;
+  }
+
+  &__nav {
+    li {
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    &-link {
+      display: inline-block;
+      color: $black;
+      padding: 10px;
+      font-size: rem(14px);
+      text-transform: uppercase;
+      transition: $anim;
+
+      &:hover {
+        color: $accent;
+      }
+
+      &_accent {
+        font-family: $accentfont;
+        font-weight: 700;
+        color: $accent;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__wrap {
+
+  }
+}
+
+
+@keyframes fadeDown {
+  from {
+    top: -70px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
   }
 }

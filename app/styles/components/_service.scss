@@ -1,0 +1,10 @@
+.service {
+	position: relative;
+	display: block;
+
+	&__title {
+		position: absolute;
+		bottom: 20px;
+		left: 23px;
+	}
+}

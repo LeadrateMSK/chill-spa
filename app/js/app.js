@@ -4,29 +4,25 @@ import Swiper from 'swiper/bundle'
 document.addEventListener('DOMContentLoaded', () => {
 	"use strict"
 
-	const swiper = new Swiper('.swiper', {
+	const swiper = new Swiper('.header__slider', {
 		loop: true,
-		slidesPerView: 1.2,
-		spaceBetween: 30,
-
-		// If we need pagination
-		pagination: {
-			el: '.swiper-pagination',
+		slidesPerView: 1,
+		autoplay: {
+			delay: 5000,
 		},
-
-		// Navigation arrows
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
 		},
-
-		// Responsive breakpoints
-		breakpoints: {
-			// when window width is >= 768px
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 20
-			},
-		}
 	});
+
+
+	const navbar = document.getElementById('navbar').classList;
+
+	window.addEventListener('scroll', (e) => {
+		if(pageYOffset > 300) navbar.add('navbar--scrolled');
+		else navbar.remove('navbar--scrolled');
+	})
+
+
 })

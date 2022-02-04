@@ -1,0 +1,20 @@
+.btn-accent {
+	display: inline-block;
+	padding: 12px 34px;
+	font-family: $accentfont;
+	font-size: rem(18px);
+	line-height: 110%;
+	color: $white;
+	font-weight: 700;
+	background-color: $primary;
+	transition: $anim;
+
+	.iconify {
+		font-size: rem(24px);
+		margin-left: 10px;
+	}
+
+	&:hover {
+		background-color: $accent;
+	}
+}
